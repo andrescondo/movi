@@ -10,6 +10,7 @@ body
 	background: #5E635E;
 	justify-content: center;
 	grid-template-columns: minmax(auto, 1024px);
+	grid-gap: 10px;
 }
 .container
 {
@@ -17,36 +18,34 @@ body
 	font-family: 'lato';
 	font-weight: 400;
 	background:#F8F9FB;
-	grid-template-columns: 300px 1fr 1fr; 
-	grid-template-areas: ". title  search"  "category movie movie";
+	grid-template-columns: 250px 1fr 1fr;
+	grid-template-areas: "title .  busqueda"  "type portada portada";
 	grid-gap: 10px; 
 	
 }
 
 .header
 {
-	/*display: grid;*/
 	background: #5ACD5D;
 	display: flex;
 	height: 80px;
 	padding: 0Px;
-	width: 1024px;
-	grid-template-columns: minmax(auto, 1024px);
 	margin: 0;
+	width: 1024px; 
 	justify-content: center;
 }
 
 .title
-{
+{	
+	grid-area: title;
 	display: grid;
+	height: inherit;
 	margin: 0 20px;
 	font-weight: 600;
 	align-items: center;
-	justify-content: center;
-	grid-area: title;
+	justify-content: space-between;
+	
 }
-
-
 
 .search
 {
@@ -56,10 +55,11 @@ body
 	justify-content: space-between;
 	align-items: center;
 	padding-right: 20px;
-	grid-area: search;
+	grid-area: busqueda;
+	height: inherit;
 }
 
-.search input
+.search-text
 {
 	
 	padding: 5px 10px;
@@ -79,7 +79,7 @@ body
 {
 	/*display: inherit;*/
 	width: 250px;
-	grid-area: category;
+	grid-area: type;
 	background: #E8EEE8;
 	padding:  0px 0px  10px 0px;
 	margin: 0px;
@@ -115,7 +115,8 @@ body
 	display: block;
 	background: #5E635E;
 	color: #fff;
-	padding: 5px;
+
+	padding: 2px 30px 2px 2px;
 }
 
 .categoria, .age
@@ -125,7 +126,7 @@ body
 
 .movie
 {
-	grid-area: movie;
+	grid-area: portada;
 	
 }
 
@@ -145,5 +146,15 @@ body
 
 .portada img:hover
 {
-	background: rgba(0, 0, 0, .9);
+	background: rgba(0, 0, 0, .5);
+}
+
+@media screen and (max-width: 768px)
+{
+	.container
+	{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: "title search" "category portada"
+	}
 }
