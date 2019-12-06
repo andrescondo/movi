@@ -110,14 +110,14 @@ body
 	padding:10px;
 }
 
-.category a:hover
+/*.category a:hover
 {
 	display: block;
 	background: #5E635E;
 	color: #fff;
 
 	padding: 2px 30px 2px 2px;
-}
+}*/
 
 .categoria, .age
 {
@@ -147,6 +147,14 @@ body
 .portada img:hover
 {
 	background: rgba(0, 0, 0, .5);
+}
+
+.volver
+{
+	border:1px solid #000;
+	background: #56BD56;
+	color: #000;
+	padding: 10px 0px;
 }
 
 @media screen and (max-width: 768px)
