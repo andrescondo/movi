@@ -19,25 +19,26 @@ body
 	font-weight: 400;
 	background:#F8F9FB;
 	grid-template-columns: 250px 1fr 1fr;
-	grid-template-areas: "title .  busqueda"  "type portada portada";
+	grid-template-areas: "header header  header"  "type portada portada";
 	grid-gap: 10px; 
 	
 }
 
 .header
 {
+	grid-area:header ;
 	background: #5ACD5D;
 	display:flex;
 	height: 80px;
 	padding: 0Px;
 	margin: 0;
-	width: 1024px; 
+	width: inherit; 
 	justify-content: left;
 }
 
 .title
 {	
-	grid-area: title;
+	/*grid-area: title;*/
 	display: flex;
 	height: inherit;
 	margin: 0 20px;
@@ -55,7 +56,7 @@ body
 	justify-content: space-between;
 	align-items: center;
 	padding-right: 20px;
-	grid-area: busqueda;
+	/*grid-area: busqueda;*/
 	height: inherit;
 }
 
