@@ -99,6 +99,11 @@ body
 	padding: 5px;
 }
 
+.category ol li
+{
+	list-style: none;
+}
+
 .category ol li a
 {
 	text-decoration: none;
