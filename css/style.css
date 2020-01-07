@@ -120,15 +120,6 @@ body
 
 }
 
-/*.category a:hover
-{
-	display: block;
-	background: #5E635E;
-	color: #fff;
-
-	padding: 2px 30px 2px 2px;
-}*/
-
 .categoria, .age
 {
 	padding: 10px ;
@@ -171,32 +162,65 @@ body
 }
 /*==========================================*/
 
-/*@media screen and (max-width: 1023px)*/
-
-	/*.container
+@media screen and (max-width: 320px)
+{
+	.container
 	{
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-areas: "title  search" "category portada portada";
-		font-size: 1.5em;
+		grid-template-columns: 1fr;
+		grid-template-areas: 'header header' 'type type' 'portada .'
 	}
+
 	.header
 	{
-		grid-area: title;
-		height: inherit;
-		font-size: 1em;
-		justify-content:right;
-		align-items: center;
+		grid-area: header;
+		max-width: 100%;
 	}
+
+	h2
+	{
+		font-size: 16px;
+	}
+
+	.title
+	{
+		background: #5ACD5D;
+		font-size: 15px;
+		margin: 2px;
+	}
+
 	.search
 	{
-		grid-area: search;
-		height: inherit;
-		font-size: 1em;
-		background: #5ACD5D;*/
+		background: #5ACD5D;
+
+	}
+
+	.search-text
+	{
+		padding: 5px 0;
+	}
+
+	.category
+	{
+		grid-area: type;
+		/*max-width: 100%;*/
+	}
+
+	.button
+	{
+		margin:0 0 0px 5px;
+	}
+
+	.movie
+	{
+		grid-area: portada;
+		margin: auto;
+		justify-content: center;
+	}
+
+}
 
 
-/*/
 
 
 
